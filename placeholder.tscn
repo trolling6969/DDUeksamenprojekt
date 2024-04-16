@@ -1,0 +1,8 @@
+[gd_scene format=2]
+
+[node name="placeholder" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_right = 550.0
+margin_bottom = 153.0
+text = "Dette er en placeholder "
