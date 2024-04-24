@@ -1,0 +1,224 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Home.gd" type="Script" id=1]
+[ext_resource path="res://c9bef366d0cc.png" type="Texture" id=2]
+[ext_resource path="res://energidrik.Png" type="Texture" id=3]
+[ext_resource path="res://water.png" type="Texture" id=4]
+[ext_resource path="res://bread.png" type="Texture" id=5]
+[ext_resource path="res://shop (JPEG).jpg" type="Texture" id=6]
+
+[node name="Node2D" type="Control"]
+margin_left = 2.0
+margin_top = -1.0
+margin_right = 2.0
+margin_bottom = -1.0
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512, 301 )
+scale = Vector2( 0.651015, 0.541367 )
+texture = ExtResource( 2 )
+
+[node name="Sleep" type="Label" parent="."]
+margin_right = 59.0
+margin_bottom = 18.0
+text = "Sleep: 0"
+
+[node name="SleepButton" type="Button" parent="."]
+margin_left = 88.0
+margin_top = 190.0
+margin_right = 184.0
+margin_bottom = 210.0
+text = "Go to sleep"
+
+[node name="food" type="Label" parent="."]
+margin_left = 64.0
+margin_right = 116.0
+margin_bottom = 17.0
+text = "food: 60"
+
+[node name="FoodButton" type="Button" parent="."]
+margin_left = 103.0
+margin_top = 409.0
+margin_right = 202.0
+margin_bottom = 429.0
+text = "eat Food"
+
+[node name="Gooutside" type="Button" parent="."]
+margin_left = 874.0
+margin_top = 483.0
+margin_right = 942.0
+margin_bottom = 503.0
+text = "Go to Work"
+
+[node name="InventoryButton" type="Button" parent="."]
+margin_left = 873.0
+margin_top = 200.0
+margin_right = 946.0
+margin_bottom = 220.0
+text = "Inventory"
+
+[node name="Inventory" type="ItemList" parent="."]
+visible = false
+margin_left = 251.0
+margin_top = 185.0
+margin_right = 773.0
+margin_bottom = 474.0
+
+[node name="vand" type="Sprite" parent="Inventory"]
+position = Vector2( 58, 57 )
+scale = Vector2( 0.107587, 0.106667 )
+texture = ExtResource( 4 )
+
+[node name="Wateritem" type="Label" parent="Inventory"]
+margin_left = 15.0
+margin_top = 132.0
+margin_right = 103.0
+margin_bottom = 146.0
+text = "Water item: 0"
+
+[node name="food=food" type="Button" parent="Inventory"]
+anchor_left = 0.344
+anchor_top = 0.049
+anchor_right = 0.582
+anchor_bottom = 0.38
+margin_left = 3.43199
+margin_top = 0.839
+margin_right = -1.80402
+margin_bottom = -1.82001
+
+[node name="mad" type="Sprite" parent="Inventory/food=food"]
+position = Vector2( 59, 47 )
+scale = Vector2( 0.08, 0.0938086 )
+texture = ExtResource( 5 )
+
+[node name="Fooditem" type="Label" parent="Inventory"]
+margin_left = 200.0
+margin_top = 130.0
+margin_right = 295.0
+margin_bottom = 144.0
+text = "Food item: 0"
+
+[node name="energidrik" type="Sprite" parent="Inventory"]
+position = Vector2( 421, 54 )
+scale = Vector2( 0.141875, 0.13 )
+texture = ExtResource( 3 )
+
+[node name="Energidrikitem" type="Label" parent="Inventory"]
+margin_left = 370.0
+margin_top = 131.0
+margin_right = 483.0
+margin_bottom = 145.0
+text = "Energidrik item: 0"
+
+[node name="go outside screen" type="ItemList" parent="."]
+visible = false
+margin_left = 319.0
+margin_top = 184.0
+margin_right = 714.0
+margin_bottom = 422.0
+
+[node name="Arbejde" type="Button" parent="go outside screen"]
+margin_left = 119.0
+margin_top = 40.0
+margin_right = 280.0
+margin_bottom = 102.0
+text = "go To Work"
+
+[node name="Shop" type="Button" parent="go outside screen"]
+margin_left = 118.0
+margin_top = 133.0
+margin_right = 278.0
+margin_bottom = 178.0
+text = "go To Shop"
+
+[node name="Shop" type="ItemList" parent="."]
+visible = false
+margin_right = 1025.0
+margin_bottom = 602.0
+
+[node name="Sprite2" type="Sprite" parent="Shop"]
+position = Vector2( 513, 300 )
+scale = Vector2( 1.39402, 1.44928 )
+texture = ExtResource( 6 )
+
+[node name="Byfood" type="Button" parent="Shop"]
+margin_left = 237.0
+margin_top = 313.0
+margin_right = 333.0
+margin_bottom = 340.0
+text = "Food"
+
+[node name="food" type="Label" parent="Shop"]
+anchor_right = 0.038
+anchor_bottom = 0.002
+margin_left = -1.0
+margin_top = 1.0
+margin_right = 0.0499992
+margin_bottom = 13.796
+text = "food: 0  "
+
+[node name="Bywater" type="Button" parent="Shop"]
+margin_left = 397.0
+margin_top = 145.0
+margin_right = 464.0
+margin_bottom = 165.0
+text = "water"
+
+[node name="water" type="Label" parent="Shop"]
+margin_left = 70.0
+margin_top = 2.0
+margin_right = 121.0
+margin_bottom = 16.0
+text = "water: 0"
+
+[node name="Byenergidrik" type="Button" parent="Shop"]
+anchor_right = 0.225
+anchor_bottom = 0.266
+margin_left = 231.0
+margin_top = 160.0
+margin_right = 78.375
+margin_bottom = 27.868
+text = "Energidrik"
+
+[node name="energidrik" type="Label" parent="Shop"]
+margin_left = 164.0
+margin_top = 1.0
+margin_right = 248.0
+margin_bottom = 15.0
+text = "energidrik: 0 "
+
+[node name="Gohome" type="Button" parent="Shop"]
+margin_left = 479.0
+margin_top = 531.0
+margin_right = 603.0
+margin_bottom = 572.0
+text = "Go home"
+
+[node name="Money" type="Label" parent="Shop"]
+margin_left = 269.0
+margin_top = 1.0
+margin_right = 368.0
+margin_bottom = 15.0
+text = "money: 0"
+
+[node name="foodfood" type="Label" parent="."]
+visible = false
+margin_left = 85.0
+margin_top = 121.0
+margin_right = 1105.0
+margin_bottom = 719.0
+rect_scale = Vector2( 13, 30 )
+text = "food=food"
+
+[connection signal="pressed" from="SleepButton" to="." method="_on_SleepButton_pressed"]
+[connection signal="pressed" from="FoodButton" to="." method="_on_FoodButton_pressed"]
+[connection signal="pressed" from="Gooutside" to="." method="_on_Gooutside_pressed"]
+[connection signal="pressed" from="InventoryButton" to="." method="_on_InventoryButton_pressed"]
+[connection signal="pressed" from="Inventory/food=food" to="." method="_on_foodfood_pressed"]
+[connection signal="pressed" from="go outside screen/Arbejde" to="." method="_on_Arbejde_pressed"]
+[connection signal="pressed" from="go outside screen/Shop" to="." method="_on_Shop_pressed"]
+[connection signal="pressed" from="Shop/Byfood" to="." method="_on_Byfood_pressed"]
+[connection signal="pressed" from="Shop/Bywater" to="." method="_on_Bywater_pressed"]
+[connection signal="pressed" from="Shop/Byenergidrik" to="." method="_on_Byenergidrik_pressed"]
+[connection signal="pressed" from="Shop/Gohome" to="." method="_on_Gohome_pressed"]

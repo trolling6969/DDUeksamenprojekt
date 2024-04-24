@@ -1,0 +1,1 @@
+insert into stats (id, job, edu, water_item, food_item, energidrik_item) values (1, 0, 0, 1, 2, 3);

@@ -1,0 +1,79 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=2]
+[ext_resource path="res://Soda.png" type="Texture" id=3]
+[ext_resource path="res://Heart.png" type="Texture" id=4]
+[ext_resource path="res://Fries.png" type="Texture" id=5]
+[ext_resource path="res://White_box_55x90.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( -514, -395 )
+script = ExtResource( 2 )
+
+[node name="Block" parent="." instance=ExtResource( 1 )]
+position = Vector2( 514, 496 )
+moving_platform_apply_velocity_on_leave = 2
+built = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 514, 487 )
+current = true
+
+[node name="ScoreLabel" type="Label" parent="Camera2D"]
+margin_left = -506.0
+margin_top = -291.0
+margin_right = -356.0
+margin_bottom = -251.0
+text = "Score: 0 dollars"
+
+[node name="ComboLabel" type="Label" parent="Camera2D"]
+margin_left = -62.0
+margin_top = -246.0
+margin_right = 65.0
+margin_bottom = -202.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Camera2D"]
+anchor_right = 0.089
+margin_left = 221.0
+margin_top = -279.0
+margin_right = 491.0
+margin_bottom = -239.0
+
+[node name="Sprite" type="Sprite" parent="Camera2D/HBoxContainer"]
+position = Vector2( 242, 12 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 4 )
+
+[node name="Sprite2" type="Sprite" parent="Camera2D/HBoxContainer"]
+position = Vector2( 167, 13 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 4 )
+
+[node name="Sprite3" type="Sprite" parent="Camera2D/HBoxContainer"]
+position = Vector2( 88, 13 )
+scale = Vector2( 0.12, 0.12 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+modulate = Color( 0.388235, 0.392157, 0.423529, 1 )
+position = Vector2( 519, 561.5 )
+scale = Vector2( 0.431987, 0.0404105 )
+texture = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 507.5, 565 )
+scale = Vector2( 15.8281, 1.09375 )
+polygon = PoolVector2Array( 32, -32, 32, 32, -32, 32, -32, -32, 31, -32 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 209, 474 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 3 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 802, 496 )
+scale = Vector2( 0.04, 0.04 )
+texture = ExtResource( 5 )

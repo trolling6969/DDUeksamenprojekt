@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://End.gd" type="Script" id=1]
+
+[node name="End" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="GoHome" type="Button" parent="."]
+margin_left = -81.0
+margin_top = 6.0
+margin_right = 84.0
+margin_bottom = 54.0
+text = "Go Home"
+
+[node name="Salary" type="Label" parent="."]
+margin_left = -85.0
+margin_top = -181.0
+margin_right = -44.0
+margin_bottom = -167.0
+text = "Salary:"
+
+[node name="SalaryAfterTax" type="Label" parent="."]
+margin_left = -84.0
+margin_top = -153.0
+margin_right = -43.0
+margin_bottom = -139.0
+text = "After Tax:"
+
+[node name="MaxCombo" type="Label" parent="."]
+margin_left = -87.0
+margin_top = -123.0
+margin_right = -8.0
+margin_bottom = -109.0
+text = "Max Combo:"
+
+[node name="Perfect" type="Label" parent="."]
+margin_left = -85.0
+margin_top = -97.0
+margin_right = -36.0
+margin_bottom = -83.0
+text = "Perfect:"
+
+[node name="TowerHeight" type="Label" parent="."]
+margin_left = -90.0
+margin_top = -66.0
+margin_right = -2.0
+margin_bottom = -52.0
+text = "Tower Height:"
+
+[node name="ScoreNumber" type="Label" parent="."]
+margin_left = 8.0
+margin_top = -181.0
+margin_right = 48.0
+margin_bottom = -167.0
+
+[node name="SalaryAfterTaxNumber" type="Label" parent="."]
+margin_left = 6.0
+margin_top = -152.0
+margin_right = 66.0
+margin_bottom = -138.0
+
+[node name="ComboNumber" type="Label" parent="."]
+margin_left = 14.0
+margin_top = -126.0
+margin_right = 54.0
+margin_bottom = -112.0
+
+[node name="PerfectNumber" type="Label" parent="."]
+margin_left = 11.0
+margin_top = -101.0
+margin_right = 51.0
+margin_bottom = -87.0
+
+[node name="HeightNumber" type="Label" parent="."]
+margin_left = 15.0
+margin_top = -68.0
+margin_right = 55.0
+margin_bottom = -54.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[connection signal="pressed" from="GoHome" to="." method="_on_GoHome_pressed"]
